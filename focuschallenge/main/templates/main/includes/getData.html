@@ -1,0 +1,53 @@
+<script type="text/javascript">    
+
+  var chartData = [];        
+  function getData(url){
+        fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+          //check if response has data and toggle between displays accordingly
+          var noData = document.getElementById("noData");
+          var hasData = document.getElementById("hasData");
+           hasData.style.display = "none";
+          if(data.results.length < 1 || data.results.length == undefined){                        
+              
+              noData.style.display = "block";
+              
+              hasData.style.display = "none";
+              
+          }
+          else{
+              noData.style.display = "none";
+              
+              hasData.style.display = "block";
+          }
+
+          data.results.forEach(function(results){
+            // update and destroy urls
+            let update='<a href="#" type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#updateModal">';
+            let destroy=`<a onclick="localStorage.setItem('id', ${results.id});" href="#" type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal">`;
+
+            //closing tag
+            let closeTag='</a>';
+            
+            chartData.push([
+                results.first_name,
+                results.last_name, 
+                results.email, 
+                results.phone,
+                results.department,
+                results.vemployee_ID,
+                update+"<i class='material-icons'>edit</i>edit"+closeTag,
+                destroy+"<i class='material-icons  '>close</i>delete"+closeTag
+            // parseFloat(value.cost)
+            ]);
+                          
+          });
+        })
+  }
+    
+
+    
+</script>
+      
+      

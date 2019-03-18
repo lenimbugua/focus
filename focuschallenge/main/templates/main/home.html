@@ -1,0 +1,46 @@
+{% extends "main/layout.html" %}
+
+{% block content %}
+    <!-- include navbar !-->
+    {% include "main/includes/navbar.html" %}
+
+
+    
+    <div class="main-panel">
+      <!-- include sidebar !-->
+      {% include "main/includes/sidebar.html" %}
+      
+      <div class="content content-area mt-4 ml-0 mr-0">
+        <div class="container-fluid p-0">          
+          <div class="card bg-faint-blue pl-2 pr-2 pb-5">
+            {% include "main/includes/top_bar.html" %}
+            <div class="row pb-5">
+              <div class="col-12 pb-5">
+                <h3 id="noData" class="text-danger">There are no employees</h3>
+                <div id ="hasData" class="pb-5">
+                  <div id="table_div" class="pb-4"></div>
+                  {% include "main/includes/pagination.html" %}
+                </div>
+              </div>
+              <!--<button class="btn btn-primary" onclick="showNotification('top','right')">Top Right Notification</button>!-->
+              
+            </div>
+          </div>
+        </div>
+      </div>      
+    </div>
+  
+  <!-- create new  employee !-->
+  {% include "main/includes/new_employee.html" %}
+  <!-- Update/edit employee !-->
+  {% include "main/includes/update_modal.html" %}
+  <!-- Destroy!-->
+  {% include "main/includes/confirm_delete.html" %}
+  <!-- upload CSV !-->
+  {% include "main/includes/upload_csv.html" %}
+  <!-- download !-->
+  {% include "main/includes/download.html" %}
+{% endblock  %}
+    
+  
+  

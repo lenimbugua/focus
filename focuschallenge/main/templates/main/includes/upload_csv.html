@@ -1,0 +1,30 @@
+{% extends "main/modal.html" %}
+
+{% block modalId %}
+     <div class="modal fade" id="importModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">   
+{% endblock  %}
+
+{% block title %}
+    Import from CSV
+{% endblock %}
+
+{% block content %}
+    <form>
+        <div class="form-group form-file-upload form-file-multiple">
+    <input type="file" multiple="" class="inputFileHidden">
+    <div class="input-group">
+        <input type="text" class="form-control inputFileVisible" placeholder="Multiple Files" multiple>
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-fab btn-round btn-info">
+                <i class="material-icons">layers</i>
+            </button>
+        </span>
+    </div>
+  </div>
+    </form>
+{% endblock %}
+
+{% block buttons %}
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+    <button type="button" class="btn btn-success">Import</button>
+{% endblock %}

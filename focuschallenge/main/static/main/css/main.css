@@ -1,0 +1,78 @@
+html, body {
+    background-color: #000000;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+.wrapper{
+	background: radial-gradient(ellipse at center,#585858 0,#232323 100%);
+	box-shadow: none;
+}
+
+.simple-text .logo-mini, .logo-normal,
+ div > ul > li > a > p, div > ul > li > a > i{
+	color: #ffffff;
+}
+.navbar-brand{
+	color: #ffffff;
+}
+.sidebar{
+	box-shadow:none;
+	background:transparent;
+}
+.bg-faint-blue{
+	background: #EDF4F9;
+}
+.card-stats{
+	background: rgb(255, 255, 255) !important;
+}
+.google-visualization-table-th{
+	color: #000000;
+}
+.google-visualization-table-td{
+	color: #343a40;
+}

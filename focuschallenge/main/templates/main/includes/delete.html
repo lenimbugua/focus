@@ -1,0 +1,15 @@
+<script>
+   
+    function deleteEmployee(){
+        let id = localStorage.getItem("id");
+        let url ='http://127.0.0.1:8000/api/employees/10/destroy';
+        fetch(url,{
+            method: 'DELETE'
+        })
+        .then(response => response.json())
+        .then(json => console.log(json))
+                
+    }
+
+    
+</script>

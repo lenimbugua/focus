@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Focus Challenge</title>    
+
+    <!-- include styles !-->
+    {% include "main/includes/styles.html" %}
+
+</head>
+<body onload="spitTable('http://127.0.0.1:8000/api/employees/');">
+    {% block content  %}
+    
+    {% endblock  %}
+
+    <!-- include javascript !-->
+   
+    {% include "main/includes/scripts.html" %}
+    {% include "main/includes/getData.html" %}
+    {% include "main/includes/table_view.html" %}
+     {% include "main/includes/delete.html" %}
+    
+    
+</body>
+</html>

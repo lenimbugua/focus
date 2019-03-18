@@ -1,0 +1,54 @@
+<div class="sidebar mt-md-5 mt-lg-5 pt-md-3 pt-lg-3" data-color="azure" data-background-color="white">
+      <!--
+      Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+      Tip 2: you can also add an image using data-image tag
+    -->
+      
+    <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item active  ">
+              <div class="nav-link">
+                <i class="material-icons text-white">filter_list</i>
+                <p class="text-white">Filter By Department</p>
+              </div>
+          </li>
+          <li class="nav-item active  ">
+            <a class="nav-link" href="#" onclick = "spitTable('http://127.0.0.1:8000/api/employees/')">
+              <i class="material-icons">all_inbox</i>
+              <p>All Departments</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#" onclick = "spitTable('http://127.0.0.1:8000/api/employees/?q=Finance')">
+              <i class="material-icons">money</i>
+              <p>Finance</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#" onclick = "spitTable('http://127.0.0.1:8000/api/employees/?q=HR')">
+              <i class="material-icons">people</i>
+              <p>HR</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#" onclick = "spitTable('http://127.0.0.1:8000/api/employees/?q=Marketing')">
+              <i class="material-icons">important_devices</i>
+              <p>Marketing</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#" onclick = "spitTable('http://127.0.0.1:8000/api/employees/?q=Operations')">
+              <i class="material-icons">transfer_within_a_station</i>
+              <p>Operations</p>
+            </a>
+          </li>          
+          <li class="nav-item ">
+            <a class="nav-link" href="#" onclick = "spitTable('http://127.0.0.1:8000/api/employees/?q=Finance')">
+              <i class="material-icons">library_books</i>
+              <p>R$D</p>
+            </a>
+          </li>
+        </ul>
+    </div>
+</div>
